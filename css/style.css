@@ -1,0 +1,24 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.wrapper{
+    padding: 10px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.wrapper div{
+    width: 150px;
+    height: 150px;
+    border: 1px solid black;
+    display: inherit;
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
+}
+

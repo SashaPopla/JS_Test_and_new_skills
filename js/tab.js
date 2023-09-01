@@ -18,13 +18,13 @@ const info = document.querySelectorAll('.info');
 blockBtn.addEventListener('click', (e) => {
     //console.dir(e.target);
     if(e.target && e.target.nodeName == 'BUTTON' && e.target.outerText == 'See first'){
-        closePrefAction(info[0], info);
+        closePrefAction(info[0]);
     }
     else if(e.target && e.target.nodeName == 'BUTTON' && e.target.outerText == 'See second'){
-        closePrefAction(info[1], info);
+        closePrefAction(info[1]);
     }
     else if(e.target && e.target.nodeName == 'BUTTON' && e.target.outerText == 'See third'){
-        closePrefAction(info[2], info);
+        closePrefAction(info[2]);
     }
 
 });

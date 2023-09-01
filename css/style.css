@@ -22,3 +22,41 @@
     font-size: 20px;
 }
 
+/* tab.html */
+
+.wrap{
+    width: 100%;
+    height: 100%;
+}
+
+img{
+    width: 450px;
+    height: 250px;
+}
+
+.wrap .btn-block{
+    display: flex;
+    width: 100%;
+}
+
+.btn-block > button{
+    margin: 0px 10px 0px 0px;
+    height: 25px;
+    width: 150px;
+    text-align: center;
+    font-size: 18px;
+    border: 1px solid black;
+}
+
+.info-block{
+    width: 100%;
+    height: 120px;
+}
+
+.info{
+    display: none;
+} 
+
+.active{
+    display: block;
+}

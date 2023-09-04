@@ -52,11 +52,3 @@ img{
     width: 100%;
     height: 120px;
 }
-
-.info{
-    display: none;
-} 
-
-.active{
-    display: block;
-}

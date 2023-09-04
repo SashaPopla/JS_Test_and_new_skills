@@ -1,30 +1,32 @@
 'use strict';
 
-function addClassAction (index){
+function hideInfoContent () {
+    info.forEach(item => {
+        item.style.display = 'none';
+        item.classList.remove('active');
+    })
+}
 
-    if(!index.classList.contains('active')){
-        index.classList.add('active');
-    }
-    else{
-        index.classList.remove('active');
-    }
+function showInfoContent (i = 0){
+    info[i].style.display = 'block';
+    info[i].classList.add('active');
 }
 
 const blockBtn = document.querySelector('.btn-block'),
-    btns = blockBtn.querySelectorAll('button');
+    btns = blockBtn.querySelectorAll('button'),
+    info = document.querySelectorAll('.info');
 
-const info = document.querySelectorAll('.info');
+hideInfoContent();
+showInfoContent();
 
 blockBtn.addEventListener('click', (e) => {
-    //console.dir(e.target);
-    if(e.target && e.target.nodeName == 'BUTTON' && e.target.outerText == 'See first'){
-        closePrefAction(info[0]);
+    const target = e.target;
+    if(target && target.nodeName == 'BUTTON'){
+        btns.forEach((item, i) => {
+            if(target == item){
+                hideInfoContent();
+                showInfoContent(i);
+            }
+        })
     }
-    else if(e.target && e.target.nodeName == 'BUTTON' && e.target.outerText == 'See second'){
-        closePrefAction(info[1]);
-    }
-    else if(e.target && e.target.nodeName == 'BUTTON' && e.target.outerText == 'See third'){
-        closePrefAction(info[2]);
-    }
-
 });

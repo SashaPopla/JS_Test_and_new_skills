@@ -84,8 +84,7 @@ window.addEventListener('DOMContentLoaded', () => {
     blocks.forEach((block) => {
         block.addEventListener('click',(e)=>{
             e.preventDefault();
-            block.classList.add('546')
-            console.log(block.className);
+            e.target.remove();
         })
     });
 
@@ -121,4 +120,18 @@ window.addEventListener('DOMContentLoaded', () => {
             })
         }
     });
+
+    const blockDay = document.querySelector('.date'),
+        blockHour = blockDay.querySelector('.hour'),
+        blockMinet = blockDay.querySelector('.minet'),
+        blockSecond = blockDay.querySelector('.second');
+
+    setInterval(() => {
+        let dateIsNow = new Date();
+
+        blockHour.innerHTML = dateIsNow.getHours() + ':';
+        blockMinet.innerHTML = dateIsNow.getMinutes() + ':';
+        blockSecond.innerHTML = dateIsNow.getSeconds();    
+
+    }, 1000)
 });
